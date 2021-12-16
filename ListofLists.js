@@ -1,4 +1,4 @@
-class nodo{
+class nodo{//first like all data structure i create the nodo with the pointers.
     constructor(dato){
         this.dato=dato;
         this.siguiente=null;
@@ -7,6 +7,7 @@ class nodo{
         this.size=0;
     }
 }
+//next i create my double array in this case with a header
 class ListadeLista{
     constructor(){
         this.primero=null;
@@ -38,10 +39,12 @@ class ListadeLista{
             aux=aux.siguiente;
         }
     }
+    // i can insert numeric values or any kind of variables that you can test
     insertSon(data,value){
         let aux=this.primero;
         while(aux!=null){
             if(data==aux.dato){
+                //HERE IS the most important part because i added a list in my list or array for to save more data in my data list.
                 aux.pila.push(value);
                 return
             }
@@ -59,6 +62,7 @@ class nodepila{
     }
     
 }
+//This is my heap that i use to insert numeric values
 class pila{
     constructor(){
         this.header=null;
@@ -106,7 +110,7 @@ var ldl=new ListadeLista();
 ldl.insert("Mamifero");
 ldl.insert("Ave");
 ldl.insert("Reptil");
-ldl.insertSon("Mamifero","Gato")
+ldl.insertSon("Mamifero","Gato")    // Here can be numeric values or text is not important aux xd
 ldl.insertSon("Mamifero","Perro")
 ldl.insertSon("Mamifero","Mono")
 ldl.insertSon("Ave","Quetzal")
